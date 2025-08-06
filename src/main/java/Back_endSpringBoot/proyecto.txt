@@ -1,0 +1,43 @@
+└── com
+    └── tuempresa
+        └── ecommerce
+            ├── ProyectoEcommerceApplication.java
+            |
+            ├── domain
+            │   ├── model       // (Tus clases actuales de la carpeta `domain`)
+            │   │   ├── User.java
+            │   │   ├── Product.java
+            │   │   └── Category.java
+            │   ├── repository  // (INTERFACES de Repositorio)
+            │   │   ├── UserRepository.java
+            │   │   └── ProductRepository.java
+            │   └── service     // (INTERFACES de Servicio)
+            │       ├── UserService.java
+            │       └── ProductService.java
+            |
+            ├── application
+            │   ├── service     // (IMPLEMENTACIONES de Servicio)
+            │   │   ├── UserServiceImpl.java
+            │   │   └── ProductServiceImpl.java
+            │   ├── mapper      // (Tus clases `mapper`)
+            │   │   └── ProductMapper.java
+            │   └── dto         // (Tus clases `dto`)
+            │       └── ProductDTO.java
+            |
+            └── infrastructure
+                ├── config
+                │   └── SecurityConfig.java
+                ├── controller
+                │   ├── ProductController.java
+                │   └── AuthController.java
+                ├── persistence // (IMPLEMENTACIONES de Repositorio)
+                │   └── JpaProductRepository.java // (Spring Data las crea por ti)
+                └── security
+                    ├── jwt
+                    │   ├── JwtAuthFilter.java
+                    │   └── JwtUtil.java
+                    ├── service
+                    │   └── CustomUserDetailsService.java
+                    └── dto
+                        ├── AuthRequest.java
+                        └── AuthResponse.java

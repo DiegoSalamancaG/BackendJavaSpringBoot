@@ -39,7 +39,6 @@ public class ProductDTO {
     private Double price;
 
     @Schema(description = "Indica si el producto está activo", example = "true", requiredMode = Schema.RequiredMode.REQUIRED)
-    @NotNull(message = "El estado activo es obligatorio")
     private Boolean active = true;
 
     @Schema(description = "ID de la categoría asociada", example = "2", requiredMode = Schema.RequiredMode.REQUIRED)

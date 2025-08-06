@@ -121,7 +121,7 @@ Rutas protegidas:
 1. **Clonar el repositorio:**
 
 ```bash
-git clone https://github.com/DiegoSalamancaG/BackendSpringBoot.git
+git clone https://github.com/DiegoSalamancaG/BackendJavaSpringBoot.git
 cd BackendSpringBoot
 ```
 

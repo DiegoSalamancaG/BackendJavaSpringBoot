@@ -38,7 +38,6 @@ public class Product extends Auditable {
     @DecimalMin(value = "1.0", message = "El precio no puede ser menor que 1")
     private Double price;
 
-    @NotNull(message = "El estado activo es obligatorio")
     @Column(columnDefinition = "BOOLEAN DEFAULT TRUE")
     private Boolean active = true;
 

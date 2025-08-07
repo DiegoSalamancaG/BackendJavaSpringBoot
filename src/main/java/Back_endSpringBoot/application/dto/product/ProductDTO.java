@@ -1,4 +1,4 @@
-package Back_endSpringBoot.application.dto;
+package Back_endSpringBoot.application.dto.product;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.*;
@@ -26,6 +26,7 @@ public class ProductDTO {
     private String description;
 
     @Schema(description = "URL de la imagen del producto", example = "https://misitio.com/imagenes/katana.jpg")
+    //@Pattern(regexp = "^(https?|ftp)://.*$", message = "La URL de la imagen debe ser válida")
     private String image;
 
     @Schema(description = "Stock disponible del producto", example = "20", requiredMode = Schema.RequiredMode.REQUIRED)

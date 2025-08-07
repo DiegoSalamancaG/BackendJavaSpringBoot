@@ -1,7 +1,7 @@
 package Back_endSpringBoot.domain.service;
 
-import Back_endSpringBoot.application.dto.UserDTO;
-import Back_endSpringBoot.application.dto.UserResponseDTO;
+import Back_endSpringBoot.application.dto.user.UserDTO;
+import Back_endSpringBoot.application.dto.user.UserResponseDTO;
 
 import java.util.List;
 import java.util.Optional;

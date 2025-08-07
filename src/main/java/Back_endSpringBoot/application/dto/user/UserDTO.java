@@ -1,4 +1,4 @@
-package Back_endSpringBoot.application.dto;
+package Back_endSpringBoot.application.dto.user;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;

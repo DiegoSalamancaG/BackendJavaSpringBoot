@@ -1,7 +1,7 @@
 package Back_endSpringBoot.application.service;
 
-import Back_endSpringBoot.application.dto.UserDTO;
-import Back_endSpringBoot.application.dto.UserResponseDTO;
+import Back_endSpringBoot.application.dto.user.UserDTO;
+import Back_endSpringBoot.application.dto.user.UserResponseDTO;
 import Back_endSpringBoot.application.mapper.UserMapper;
 import Back_endSpringBoot.domain.model.User;
 import Back_endSpringBoot.domain.repository.UserRepository;

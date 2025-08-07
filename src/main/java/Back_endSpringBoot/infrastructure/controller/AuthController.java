@@ -1,20 +1,12 @@
 package Back_endSpringBoot.infrastructure.controller;
 
-import Back_endSpringBoot.application.dto.UserDTO;
-import Back_endSpringBoot.application.mapper.UserMapper;
+import Back_endSpringBoot.application.dto.user.UserDTO;
 import Back_endSpringBoot.application.service.AuthService;
-import Back_endSpringBoot.domain.repository.UserRepository;
 import Back_endSpringBoot.infrastructure.security.dto.AuthRequest;
 import Back_endSpringBoot.infrastructure.security.dto.AuthResponse;
-import Back_endSpringBoot.infrastructure.security.jwt.JwtUtil;
-import Back_endSpringBoot.infrastructure.security.service.CustomUserDetail;
-import Back_endSpringBoot.infrastructure.security.service.CustomUserDetailsService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.authentication.AuthenticationManager;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;

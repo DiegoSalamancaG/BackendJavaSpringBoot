@@ -1,12 +1,11 @@
 package Back_endSpringBoot.infrastructure.controller;
 
-import Back_endSpringBoot.application.dto.UserDTO;
-import Back_endSpringBoot.application.dto.UserResponseDTO;
+import Back_endSpringBoot.application.dto.user.UserDTO;
+import Back_endSpringBoot.application.dto.user.UserResponseDTO;
 import Back_endSpringBoot.domain.service.UserService;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

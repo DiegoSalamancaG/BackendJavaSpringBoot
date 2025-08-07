@@ -1,6 +1,8 @@
 # 🛒 Backend de Ecommerce con Spring Boot, JWT y PostgreSQL
 
-Este proyecto es un backend RESTful para una tienda en línea, construido con **Spring Boot**. Implementa autenticación segura con JWT, documentación con Swagger, arquitectura en capas y buenas prácticas modernas de desarrollo backend. Ideal como base sólida para un sistema de ecommerce completamente funcional.
+Este proyecto es un backend RESTful para una tienda en línea, construido con **Spring Boot**. Implementa autenticación segura con JWT, documentación con Swagger, arquitectura en capas y buenas prácticas modernas de desarrollo backend. Ideal como base sólida para un sistema de ecommerce completamente funcional. No solo se enfoca en las características de un ecommerce, sino también en aplicar buenas prácticas de diseño de software. Representa **mi primer proyecto utilizando una arquitectura hexagonal**, buscando una clara separación de la lógica de negocio del resto de las capas (aplicación e infraestructura).
+
+
 
 ---
 

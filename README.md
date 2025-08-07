@@ -1,6 +1,6 @@
-# 🛒 Proyecto Ecommerce - Backend robusto con Spring Boot y JWT
+# 🛒 Backend de Ecommerce con Spring Boot, JWT y PostgreSQL
 
-Este proyecto es un backend RESTful para una tienda en línea, construido con **Spring Boot**. Implementa autenticación segura con JWT, documentación con Swagger, arquitectura en capas y buenas prácticas modernas de desarrollo backend. Ideal como base para un sistema de ecommerce completo.
+Este proyecto es un backend RESTful para una tienda en línea, construido con **Spring Boot**. Implementa autenticación segura con JWT, documentación con Swagger, arquitectura en capas y buenas prácticas modernas de desarrollo backend. Ideal como base sólida para un sistema de ecommerce completamente funcional.
 
 ---
 
@@ -108,12 +108,15 @@ Rutas protegidas:
 
 ## 📦 Endpoints principales
 
-| Método | Ruta                          | Descripción                     |
-|--------|-------------------------------|---------------------------------|
-| POST   | `/api/v1/auth/register`       | Registro de nuevo usuario       |
-| POST   | `/api/v1/auth/login`          | Login y generación de token     |
-| GET    | `/api/v1/users`               | Listado de usuarios (ADMIN)     |
-| GET    | `/api/v1/products`            | Listado de productos (público)  |
+| Método | Ruta                    | Descripción                    |
+|--------|-------------------------|--------------------------------|
+| POST   | `/api/v1/auth/register` | Registro de nuevo usuario      |
+| POST   | `/api/v1/auth/login`    | Login y generación de token    |
+| GET    | `/api/v1/users`         | Listado de usuarios (ADMIN)    |
+| GET    | `/api/v1/products`      | Listado de productos (público) |
+| GET    | `/api/v1/collections`   | Listado de colecciones (ADMIN) |
+| GET    | `/api/v1/categories`    | Listado de categorías (ADMIN)  |
+
 
 ---
 ## 🚀 Cómo Ejecutar el Proyecto
@@ -122,7 +125,7 @@ Rutas protegidas:
 
 ```bash
 git clone https://github.com/DiegoSalamancaG/BackendJavaSpringBoot.git
-cd BackendSpringBoot
+cd BackendJavaSpringBoot
 ```
 
 2. **Configurar la base de datos (PostgreSQL):**
@@ -164,12 +167,26 @@ La API está documentada con Swagger:
 
 ---
 
-## 📌 TODOs y mejoras futuras
+## 📌 Mejoras Futuras
 
-- [ ] Agregar manejo global de excepciones con `@ControllerAdvice`
-- [ ] Implementar validación de formularios con `@Valid`
-- [ ] Integrar pruebas unitarias y de integración
-- [ ] Agregar auditoría de entidades (creado/actualizado por)
+- ✅ CRUD completo para productos
+- [ ] Manejo global de excepciones con `@ControllerAdvice`
+- [ ] Validación de formularios con `@Valid`
+- [ ] Pruebas unitarias y de integración con JUnit/Mockito
+- [ ] Auditoría de entidades (fecha y usuario de creación/modificación)
+- [ ] CRUD para órdenes de compra y registro de ventas
+
+---
+
+## 🤝 Contribuciones
+
+Este proyecto está abierto a mejoras. Si deseas contribuir:
+1. Haz un fork del repositorio.
+2. Crea una nueva rama (`git checkout -b feature/nueva-funcionalidad`)
+3. Realiza tus cambios y haz commit (`git commit -m 'Agrega nueva funcionalidad'`)
+4. Envía un pull request.
+
+¡Toda contribución es bienvenida!
 
 ---
 

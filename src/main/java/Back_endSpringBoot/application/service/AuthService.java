@@ -14,6 +14,7 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 @RequiredArgsConstructor
@@ -41,6 +42,7 @@ public class AuthService {
         return new AuthResponse(token);
     }
 
+    @Transactional
     public String register(UserDTO request){
         if(userRepository.findByUsername(request.getUsername()).isPresent()){
             throw new RuntimeException("Usuario ya existe!");
@@ -54,6 +56,7 @@ public class AuthService {
         newUser.setAdmin(false);
         newUser.setActive(true);
 
+        userRepository.save(newUser);
         return "Usuario registrado correctamente";
     }
 

@@ -8,12 +8,14 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.web.authentication.WebAuthenticationDetailsSource;
 import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
 
 import java.io.IOException;
+import java.util.stream.Collectors;
 
 /**
  * Filtro JWT que intercepta cada solicitud HTTP para:
@@ -62,6 +64,11 @@ public class JwtAuthFilter extends OncePerRequestFilter {
                     authToken.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));
                     SecurityContextHolder.getContext().setAuthentication(authToken);
                     System.out.println("Token válido. Autenticando a: " + username);
+
+                    String roles = userDetail.getAuthorities().stream()
+                            .map(GrantedAuthority::getAuthority)
+                            .collect(Collectors.joining(", "));
+                    System.out.println("Roles: "+ roles);
                 }
             }catch (Exception e){
                 response.sendError(HttpServletResponse.SC_UNAUTHORIZED,"Token inválido o expirado");
@@ -70,21 +77,5 @@ public class JwtAuthFilter extends OncePerRequestFilter {
         }
 
         filterChain.doFilter(request,response);
-        System.out.println("Encabezado Authorization: " + authHeader);
-        System.out.println("Token extraído: " + jwt);
-        System.out.println("Username extraído: " + username);
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
 }

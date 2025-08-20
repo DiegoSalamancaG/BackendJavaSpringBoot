@@ -53,6 +53,7 @@ public class SecurityConfig {
                         // Regla #1: Permite explícitamente la creación de usuarios para CUALQUIERA.
                         .requestMatchers("/api/v1/auth/**").permitAll()// Permitir acceso sin autenticación a rutas públicas
                         .requestMatchers(HttpMethod.GET,"/api/v1/products/**").permitAll()
+                        .requestMatchers(HttpMethod.POST, "/api/v1/orders/**").authenticated()
 
                         // Regla #2: Requiere el rol 'ADMIN' para el resto de los endpoints de usuarios.
                         // Esto protege GET, PUT, DELETE en /api/v1/users/**

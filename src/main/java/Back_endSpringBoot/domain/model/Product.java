@@ -8,6 +8,8 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
+import java.math.BigDecimal;
+
 @EqualsAndHashCode(callSuper = true)
 @Data
 @AllArgsConstructor
@@ -36,7 +38,7 @@ public class Product extends Auditable {
 
     @NotNull(message = "El precio es obligatorio")
     @DecimalMin(value = "1.0", message = "El precio no puede ser menor que 1")
-    private Double price;
+    private BigDecimal price;
 
     @Column(columnDefinition = "BOOLEAN DEFAULT TRUE")
     private Boolean active = true;

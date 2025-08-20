@@ -42,7 +42,7 @@ public class OrderServiceImpl implements OrderService {
 
     @Override
     public Optional<OrderResponseDTO> getOrderById(Long id) {
-        return orderRepository.findById(id)
+        return orderRepository.findByIdWithItems(id)
                 .map(orderMapper::toResponseDTO);
     }
 

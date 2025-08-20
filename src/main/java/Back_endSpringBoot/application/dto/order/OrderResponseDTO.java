@@ -14,6 +14,8 @@ import java.util.List;
 public class OrderResponseDTO {
 
     private Long id;
+    private String username;
+    private Long userId;
     private List<OrderItemResponseDTO> items;
     private BigDecimal total;
     private LocalDateTime createdAt;

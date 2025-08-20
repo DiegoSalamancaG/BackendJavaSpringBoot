@@ -11,6 +11,7 @@ public interface OrderMapper {
 
     Order toEntity(OrderDTO dto);
 
-    //@Mapping(source = "user.id", target = "userId")
+    @Mapping(source = "user.id", target = "userId")
+    @Mapping(source = "user.username", target = "username")
     OrderResponseDTO toResponseDTO(Order order);
 }

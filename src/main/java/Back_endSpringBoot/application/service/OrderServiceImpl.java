@@ -100,8 +100,11 @@ public class OrderServiceImpl implements OrderService {
 
     @Override
     public Boolean deleteOrder(Long id) {
-        if (!orderRepository.existsById(id)) return false;
-        orderRepository.deleteById(id);
+        Order order = orderRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Orden no encontrada con id: " + id));
+        // soft delete
+        order.setStatus(OrderStatus.CANCELLED);
+        orderRepository.save(order);
         return true;
     }
 }
